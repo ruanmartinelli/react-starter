@@ -17,19 +17,21 @@ function App() {
     <>
       <Router>
         {isAuth && <Header />}
-        <Switch>
-          <Route path="/login">
-            <SignInPage isAuth={isAuth} />
-          </Route>
+        <main className="mt-5">
+          <Switch>
+            <Route path="/login">
+              <SignInPage isAuth={isAuth} />
+            </Route>
 
-          <PrivateRoute path="/breweries/:id">
-            <BreweryDetailPage />
-          </PrivateRoute>
+            <PrivateRoute path="/breweries/:id">
+              <BreweryDetailPage />
+            </PrivateRoute>
 
-          <PrivateRoute path="/">
-            <BreweryListPage />
-          </PrivateRoute>
-        </Switch>
+            <PrivateRoute path="/">
+              <BreweryListPage />
+            </PrivateRoute>
+          </Switch>
+        </main>
         {isAuth && <Footer />}
       </Router>
     </>

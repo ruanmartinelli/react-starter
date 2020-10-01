@@ -17,7 +17,7 @@ function SignIn({ isAuth }) {
   if(isAuth) return <Redirect to="/"></Redirect>
 
   return (
-    <Container className="mt-5">
+    <Container>
       <h1>Sign In</h1>
       <Form onSubmit={onSubmitForm}>
         <Form.Group>
